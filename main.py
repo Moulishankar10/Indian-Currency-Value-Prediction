@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
-data = pd.read_csv(data/data.csv)
+data = pd.read_csv("data/data.csv")
 
 print("\nEnter the following details as what you want to predict!")
 input_month = input("\nEnter the time period (MM-YYYY) : ")
@@ -48,6 +48,6 @@ print(f"The Predicted INR per USD on {input_month} --- {res}")
 
 # TO VISUALISE THE ACCURACY
 
-plt.plot(data["Month"], data["Price"], color = red)
-plt.plot(data["Month"], mod.predict(model.fit_transform(x))) 
+plt.plot(data["Month"], data["Price"], color = 'red')
+plt.plot(data["Month"], mod.predict(model.fit_transform(x)), color = 'green') 
 plt.show()

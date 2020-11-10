@@ -43,3 +43,5 @@ mod = LinearRegression()
 mod.fit(model_x,y)
 
 res = mod.predict(model.fit_transform([[x_pred]]))
+
+print(f"The Predicted INR per USD on {input_month} --- {res}")

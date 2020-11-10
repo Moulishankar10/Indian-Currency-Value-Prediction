@@ -45,3 +45,9 @@ mod.fit(model_x,y)
 res = mod.predict(model.fit_transform([[x_pred]]))
 
 print(f"The Predicted INR per USD on {input_month} --- {res}")
+
+# TO VISUALISE THE ACCURACY
+
+plt.plot(data["Month"], data["Price"], color = red)
+plt.plot(data["Month"], mod.predict(model.fit_transform(x))) 
+plt.show()

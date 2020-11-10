@@ -36,3 +36,10 @@ x = x.reshape(len(x),1)
 y = data["Price"].values
 y = np.array(y,dtype=int)
 y = y.reshape(len(y),1)
+
+model = PolynomialFeatures(degree = 2)
+model_x = model.fit_transform(x)
+mod = LinearRegression()
+mod.fit(model_x,y)
+
+res = mod.predict(model.fit_transform([[x_pred]]))

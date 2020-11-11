@@ -49,7 +49,7 @@ y = sc_y.fit_transform(y)
 '''
 
 #~~~~~~~~~~~~~~~~~~~~~~~POLYNOMIAL REGRESSION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-model = PolynomialFeatures(degree = 4)
+model = PolynomialFeatures(degree = 10)
 model_x = model.fit_transform(x)
 mod = LinearRegression()
 mod.fit(model_x,y)

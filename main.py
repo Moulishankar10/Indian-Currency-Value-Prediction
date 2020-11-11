@@ -68,9 +68,6 @@ res = sc_y.inverse_transform(regressor.predict(sc_x.transform([[x_pred]])))
 
 print(f"The Predicted INR per USD on {input_month} --- {res}")
 
-print("Accuracy : ",regressor.score(x,y))
-
-
 # TO VISUALISE THE ACCURACY
 
 '''
@@ -82,6 +79,10 @@ plt.show()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SVR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ACCURACY SCORE PREDICTION
+print("Accuracy : ",regressor.score(x,y))
+
+# GRAPHICAL VISUALISATION
 x_grid = np.arange(min(sc_x.inverse_transform(x)), max(sc_x.inverse_transform(x)), 0.1)
 x_grid = x_grid.reshape((len(x_grid), 1))
 plt.plot(sc_x.inverse_transform(x), sc_y.inverse_transform(y), color = 'red')

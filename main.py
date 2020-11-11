@@ -66,7 +66,7 @@ regressor.fit(x, y)
 res = sc_y.inverse_transform(regressor.predict(sc_x.transform([[x_pred]])))
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-print(f"The Predicted INR per USD on {input_month} --- {res}")
+print(f"The Predicted INR per USD on {input_month} --- {float(res)}")
 
 # TO VISUALISE THE ACCURACY
 

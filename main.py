@@ -49,7 +49,7 @@ y = sc_y.fit_transform(y)
 '''
 
 #~~~~~~~~~~~~~~~~~~~~~~~POLYNOMIAL REGRESSION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-model = PolynomialFeatures(degree = 2)
+model = PolynomialFeatures(degree = 4)
 model_x = model.fit_transform(x)
 mod = LinearRegression()
 mod.fit(model_x,y)
@@ -75,6 +75,7 @@ print(f"The Predicted INR per USD on {input_month} --- {res}")
 #~~~~~~~~~~~~~~~~~~~~~~~~~POLYNOMIAL REGRESSION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 plt.plot(data["Month"], data["Price"], color = 'red')
 plt.plot(data["Month"], mod.predict(model.fit_transform(x)), color = 'green') 
+plt.scatter(x_pred, res, color = 'blue')
 plt.show()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''

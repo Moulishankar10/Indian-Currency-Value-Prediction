@@ -91,3 +91,23 @@ plt.plot(x_grid, sc_y.inverse_transform(regressor.predict(sc_x.transform(x_grid)
 plt.scatter(x_pred, res, color='green')
 plt.show()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+print(
+    '''
+
+                  HAPPY TO HAVE YOU ON INDIAN CURRENCY VALUE PREDICTION !
+
+                         FOR BEING COMFORTABLE WITH THIS PROGRAM , 
+                      
+                           PLEASE PROVIDE THE FOLLOWING DETAILS
+
+''')
+
+print('''\n 
+                           WHAT IS YOUR OPERATING SYSTEM ?
+
+                                 1. WINDOWS
+
+                                 2. LINUX / MAC OS
+
+''')

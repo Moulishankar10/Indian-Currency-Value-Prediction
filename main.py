@@ -90,6 +90,7 @@ def mlmodel():
     ## ACCURACY SCORE PREDICTION
     print("Accuracy : ",regressor.score(x,y))
 
+    """
     ## GRAPHICAL VISUALISATION
     x_grid = np.arange(min(sc_x.inverse_transform(x)), max(sc_x.inverse_transform(x)), 0.1)
     x_grid = x_grid.reshape((len(x_grid), 1))
@@ -98,7 +99,8 @@ def mlmodel():
     plt.scatter(x_pred, res, color='green')
     plt.show()
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    """
+    
 print(
     '''
 

@@ -102,4 +102,10 @@ def mlmodel():
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     """
     
+print(
+    '''
+
+                  HAPPY TO HAVE YOU ON INDIAN CURRENCY VALUE PREDICTION !
+
+''')
 mlmodel()

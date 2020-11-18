@@ -12,8 +12,10 @@ import datetime as dt
 import matplotlib.pyplot as plt
 #from sklearn.linear_model import LinearRegression
 #from sklearn.preprocessing import PolynomialFeatures
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVR
+#from sklearn.preprocessing import StandardScaler
+#from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestRegressor
+
 
 def mlmodel():
 
@@ -45,13 +47,14 @@ def mlmodel():
     y = np.array(y,dtype=int)
     y = y.reshape(len(y),1)
 
-
+    """
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SVR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     sc_x = StandardScaler()
     sc_y = StandardScaler()
     x = sc_x.fit_transform(x)
     y = sc_y.fit_transform(y)
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    """
     '''
 
     #~~~~~~~~~~~~~~~~~~~~~~~POLYNOMIAL REGRESSION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,11 +70,11 @@ def mlmodel():
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SVR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # FITTING MODEL
-    regressor = SVR(kernel = 'rbf')
+    regressor = RandomForestRegressor(n_estimators = 1000, random_state = 0)
     regressor.fit(x, y)
 
     # PREDICTING MODEL
-    res = sc_y.inverse_transform(regressor.predict(sc_x.transform([[x_pred]])))
+    res = regressor.predict([[x_pred]])
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     # DISPLAYING RESULTS
@@ -91,16 +94,16 @@ def mlmodel():
     ## ACCURACY SCORE PREDICTION
     print("Accuracy : ",regressor.score(x,y))
 
-    """
+    
     ## GRAPHICAL VISUALISATION
-    x_grid = np.arange(min(sc_x.inverse_transform(x)), max(sc_x.inverse_transform(x)), 0.1)
+    x_grid = np.arange(min(x), max(x), 0.01)
     x_grid = x_grid.reshape((len(x_grid), 1))
-    plt.plot(sc_x.inverse_transform(x), sc_y.inverse_transform(y), color = 'red')
-    plt.plot(x_grid, sc_y.inverse_transform(regressor.predict(sc_x.transform(x_grid))), color = 'blue')
+    plt.plot(x, y, color = 'red')
+    plt.plot(x_grid, regressor.predict(x_grid), color = 'blue')
     plt.scatter(x_pred, res, color='green')
     plt.show()
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    """
+    
     
 print(
     '''

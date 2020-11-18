@@ -16,6 +16,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 
 def mlmodel():
+
     # IMPORTING DATA
     data = pd.read_csv("data/data.csv")
 
@@ -101,34 +102,4 @@ def mlmodel():
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     """
     
-print(
-    '''
-
-                  HAPPY TO HAVE YOU ON INDIAN CURRENCY VALUE PREDICTION !
-
-                         FOR BEING COMFORTABLE WITH THIS PROGRAM , 
-                      
-                           PLEASE PROVIDE THE FOLLOWING DETAILS
-
-''')
-
-print('''\n 
-                           WHAT IS YOUR OPERATING SYSTEM ?
-
-                                 1. WINDOWS
-
-                                 2. LINUX / MAC OS
-
-''')
-
-opt = int(input("\nYOUR OPTION : "))
-
-if opt == 1:
-     print("\nNOW YOU WILL BE REDIRECTED TO 'requirements.bat'")
-     os.system('requirements.bat')
-     mlmodel()
-
-if opt == 2:
-    print("\nNOW YOU WILL BE REDIRECTED TO 'requirements.sh'")
-    os.system('bash requirements.sh')
-    mlmodel()
+mlmodel()

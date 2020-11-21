@@ -47,8 +47,6 @@ def mlmodel():
     y = np.array(y,dtype=int)
     y = y.reshape(len(y),1)
 
-
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SVR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # FITTING MODEL
     regressor = RandomForestRegressor(n_estimators = 1000, random_state = 0)
     regressor.fit(x, y)

@@ -69,9 +69,7 @@ def mlmodel():
     plt.plot(x, y, color = 'red')
     plt.plot(x_grid, regressor.predict(x_grid), color = 'blue')
     plt.scatter(x_pred, res, color='green')
-    plt.show()
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
+    plt.show()    
     
 print(
     '''

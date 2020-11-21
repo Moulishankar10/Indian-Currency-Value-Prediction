@@ -53,7 +53,6 @@ def mlmodel():
 
     # PREDICTING MODEL
     res = regressor.predict([[x_pred]])
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     # DISPLAYING RESULTS
     print(f"The Predicted INR per USD on {input_month} --- {float(res)}")

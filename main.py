@@ -59,15 +59,6 @@ def mlmodel():
 
     # TO VISUALISE THE ACCURACY
 
-    '''
-    #~~~~~~~~~~~~~~~~~~~~~~~~~POLYNOMIAL REGRESSION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    plt.plot(data["Month"], data["Price"], color = 'red')
-    plt.plot(data["Month"], mod.predict(model.fit_transform(x)), color = 'green') 
-    plt.scatter(x_pred, res, color = 'blue')
-    plt.show()
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    '''
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SVR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ## ACCURACY SCORE PREDICTION
     print("Accuracy : ",regressor.score(x,y))
 

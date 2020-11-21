@@ -47,18 +47,6 @@ def mlmodel():
     y = np.array(y,dtype=int)
     y = y.reshape(len(y),1)
 
-    '''
-
-    #~~~~~~~~~~~~~~~~~~~~~~~POLYNOMIAL REGRESSION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    model = PolynomialFeatures(degree = 10)
-    model_x = model.fit_transform(x)
-    mod = LinearRegression()
-    mod.fit(model_x,y)
-
-    res = mod.predict(model.fit_transform([[x_pred]]))
-
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    '''
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SVR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # FITTING MODEL

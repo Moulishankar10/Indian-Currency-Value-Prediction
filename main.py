@@ -47,14 +47,6 @@ def mlmodel():
     y = np.array(y,dtype=int)
     y = y.reshape(len(y),1)
 
-    """
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SVR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    sc_x = StandardScaler()
-    sc_y = StandardScaler()
-    x = sc_x.fit_transform(x)
-    y = sc_y.fit_transform(y)
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    """
     '''
 
     #~~~~~~~~~~~~~~~~~~~~~~~POLYNOMIAL REGRESSION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

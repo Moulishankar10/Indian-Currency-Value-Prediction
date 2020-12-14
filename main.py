@@ -55,12 +55,12 @@ def mlmodel():
     res = regressor.predict([[x_pred]])
 
     # DISPLAYING RESULTS
-    print(f"The Predicted INR per USD on {input_month} --- {float(res)}")
+    print(f"\nThe Predicted INR per USD on {input_month} --- {float(res)}")
 
     # TO VISUALISE THE ACCURACY
 
     ## ACCURACY SCORE PREDICTION
-    print(f"\nAccuracy : {round(regressor.score(x,y)*100,2)}%")
+    print(f"\nAccuracy : {round(regressor.score(x,y)*100,2)}%\n")
 
     
     ## GRAPHICAL VISUALISATION

@@ -73,7 +73,7 @@ ypred_scaled = model.predict(xval_scaled)
 y_pred = scaler_y.inverse_transform(ypred_scaled)
 print(f"\nAccuracy of the model : {round(r2_score(y_val, y_pred)*100,2)}%")1
 
-# SAVING THE MODEL
+# SAVING THE TRAINED MODEL
 PATH = './model/model'
 save_model(model,PATH)
 print(f"\n\n ---- Successfully stored the trained model at {PATH} ---- \n\n")

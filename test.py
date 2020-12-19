@@ -40,3 +40,23 @@ y_scaled = scaler_y.fit_transform(y)
 
 # LOADING THE TRAINED MODEL
 model = load_model("model/model",custom_objects=None,compile=True)
+
+# INPUT DATA
+print("\nEnter the following details as what you want to predict!")
+input_month = input("\nEnter the time period (MM-YYYY) : ")
+
+# PREPROCESSING INPUT DATA
+x_str = dt.datetime(int(input_month[-4:]),int(input_month[:2]),1)
+x_pred = (x_str.year - initial.year) * 12 + (x_str.month - initial.month)
+x_pred = np.array(x_pred)
+x_pred = np.reshape(x_pred, (-1,1))
+
+# SCALING INPUT DATA
+xpred_scaled = scaler_x.transform(x_pred)
+
+# PREDICTING THE RESULTANT VALUE
+ypred_scaled = model.predict(xpred_scaled)
+y_pred = scaler_y.inverse_transform(ypred_scaled)
+
+# DISPLAYING THE RESULTS
+print(f"\n\n The Predicted INR per USD on {input_month} ---- {round(float(y_pred),4)} \n\n")

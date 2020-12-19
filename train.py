@@ -70,3 +70,8 @@ plt.ylabel('Loss')
 plt.xlabel('Epochs')
 plt.legend(['Train', 'Validation'], loc='upper right')
 plt.show()
+
+# ACCURACY OF THE MODEL
+ypred_scaled = model.predict(xval_scaled)
+y_pred = scaler_y.inverse_transform(ypred_scaled)
+print(f"\nAccuracy of the model : {round(r2_score(y_val, y_pred)*100,2)}%")

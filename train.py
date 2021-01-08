@@ -51,7 +51,9 @@ xval_scaled = scaler_x.fit_transform(x_val)
 # BUILDING THE NEURAL NETWORK
 model = Sequential()
 model.add(Dense(2, input_dim = 1, activation = 'relu', kernel_initializer='normal'))
-model.add(Dense(191, activation = 'relu'))
+model.add(Dense(70, activation = 'relu'))
+model.add(Dense(70, activation = 'relu'))
+model.add(Dense(70, activation = 'relu'))
 model.add(Dense(1, activation = 'linear'))
 
 # TRAINING THE DATA

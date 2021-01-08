@@ -59,4 +59,4 @@ ypred_scaled = model.predict(xpred_scaled)
 y_pred = scaler_y.inverse_transform(ypred_scaled)
 
 # DISPLAYING THE RESULTS
-print(f"\n\n The Predicted INR per USD on {input_month} ---- {round(float(y_pred),4)} \n\n")
+print(f"\n\n The Predicted INR per USD on {input_month} ---- Rs.{round(float(y_pred),4)} \n\n")

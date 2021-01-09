@@ -49,7 +49,7 @@ y_est = scaler_y.inverse_transform(y_est)
 # VISUALISING THE MODEL PERFORMANCE
 plt.plot(x,y, color = 'blue')
 plt.plot(x,y_est, color = 'red')
-plt.title('Sea Level Prediction')
+plt.title('Indian Currency Value Prediction')
 plt.xlabel('Time')
 plt.ylabel('GMSL')
 plt.legend(['Actual Data', 'Predicted Data'], loc='upper left')

@@ -31,3 +31,13 @@ y = data["GMSL"].values
 # RESHAPING THE DATA
 x = np.reshape(x, (-1,1))
 y = np.reshape(y, (-1,1))
+
+# SCALING THE DATA
+scaler_x = MinMaxScaler()
+scaler_y = MinMaxScaler()
+
+x_scaled = scaler_x.fit_transform(x)
+y_scaled = scaler_y.fit_transform(y)
+
+# LOADING THE TRAINED MODEL
+model = load_model("model/model",custom_objects=None,compile=True)

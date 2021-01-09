@@ -8,6 +8,4 @@ An ML model which predicts the value of Indian Currency for a US Dollar (INR per
 
 [Vigneshwar Ravichandar](https://github.com/ToastCoder)
 
-### Development Status
 
-Under Development 

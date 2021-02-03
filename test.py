@@ -45,6 +45,8 @@ model = load_model("model/model",custom_objects=None,compile=True)
 print("\nEnter the Time Period on when you want to explore the prediction !")
 input_month = input("\nTime Period (MM-YYYY) : ")
 
+month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+
 # PREPROCESSING INPUT DATA
 x_str = dt.datetime(int(input_month[-4:]),int(input_month[:2]),1)
 x_pred = (x_str.year - initial.year) * 12 + (x_str.month - initial.month)
@@ -59,5 +61,5 @@ ypred_scaled = model.predict(xpred_scaled)
 y_pred = scaler_y.inverse_transform(ypred_scaled)
 
 # DISPLAYING THE RESULTS
-print(f"\n\n As per the prediction, on {input_month} the value of INR per USD might be ---- Rs.{round(float(y_pred),4)} (Monthly Average)\n\n")
+print(f"\n\n As per the prediction, on {month[input_month[:2]]} {input_month[-4:]} the value of INR per USD might be ---- Rs.{round(float(y_pred),4)} (Monthly Average)\n\n")
 print(f"i.e., 1 USD = {round(float(y_pred),4)} INR ")

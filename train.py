@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
 # IMPORTING DATA
-data = pd.read_csv("data.csv")
+data = pd.read_csv("data/data.csv")
 
 # PREPROCESSING DATA
 x = []

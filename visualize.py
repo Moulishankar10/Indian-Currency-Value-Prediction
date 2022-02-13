@@ -10,6 +10,7 @@ import datetime as dt
 from tensorflow import keras
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
+import matplotlib.pyplot as plt
 
 # IMPORTING DATA
 data = pd.read_csv("data/data.csv")
@@ -39,7 +40,7 @@ x_scaled = scaler_x.fit_transform(x)
 y_scaled = scaler_y.fit_transform(y)
 
 # LOADING THE TRAINED MODEL
-model = load_model("model/model",custom_objects=None,compile=True)
+model = load_model('model.h5')
 
 # PREDICTING THE MODEL
 y_est = model.predict(x_scaled)
